@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products with Names</title>
+</head>
+<body>
+
+<h2>Products Price Calculation</h2>
+
+<script>
+    // Array of products (name + price)
+    const products = [
+        { name: "Mobile", price: 16000 },
+        { name: "Laptop", price: 55000 },
+        { name: "TV", price: 30000 },
+        { name: "Headphones", price: 5000 },
+        { name: "Washing Machine", price: 25000 }
+    ];
+
+    // Display original products
+    products.forEach(p =>
+        document.writeln(p.name + " : " + p.price + "<br>")
+    );
+    document.writeln("<br>");
+
+    // Total price before discount
+    const totalBeforeDiscount = products.reduce(
+        (sum, p) => sum + p.price, 0
+    );
+    document.writeln("Total Price Before Discount: " + totalBeforeDiscount + "<br><br>");
+
+    // Apply 10% discount
+    const discountedProducts = products.map(p => ({
+        name: p.name,
+        price: p.price - (p.price * 0.10)
+    }));
+
+    document.writeln("Discounted Products:<br>");
+    discountedProducts.forEach(p =>
+        document.writeln(p.name + " : " + p.price + "<br>")
+    );
+    document.writeln("<br>");
+
+    // Total price after discount
+    const totalAfterDiscount = discountedProducts.reduce(
+        (sum, p) => sum + p.price, 0
+    );
+    document.writeln("Total Price After Discount: " + totalAfterDiscount + "<br><br>");
+
+    // Filter products with price > 2000 after discount
+    const filteredProducts = discountedProducts.filter(p => p.price > 20000);
+
+    document.writeln("Products greater than 2000 after discount:<br>");
+    filteredProducts.forEach(p =>
+        document.writeln(p.name + " : " + p.price + "<br>")
+    );
+    document.writeln("<br>");
+
+    // Total price of filtered products
+    const totalFilteredPrice = filteredProducts.reduce(
+        (sum, p) => sum + p.price, 0
+    );
+    document.writeln("Total Price of items greater than 2000: " + totalFilteredPrice);
+</script>
+
+</body>
+</html>

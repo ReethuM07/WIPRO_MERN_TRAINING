@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reethu M</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, #2c3e50, #4ca1af);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        /* NAVBAR */
+        nav {
+            background-color: #2c3e50;
+            text-align: center;
+            padding: 12px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* SECTIONS */
+        section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 50px 20px;
+        }
+
+        section h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+
+        /* ABOUT */
+        .about p {
+            font-size: 17px;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        /* EDUCATION */
+        .education-card {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        }
+
+        .education-card h3 {
+            margin: 0;
+            color: #2c3e50;
+        }
+
+        .education-card p {
+            margin: 8px 0;
+            font-size: 15px;
+        }
+
+        /* SKILLS */
+        .skills {
+            text-align: center;
+        }
+
+        .skills span {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 18px;
+            margin: 8px;
+            border-radius: 25px;
+            font-size: 14px;
+        }
+
+        /* PROJECTS */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+
+        .project-card p {
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        /* CONTACT */
+        .contact {
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .contact p {
+            margin: 8px 0;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Reethu M</h1>
+    <p>Software Development Engineer</p>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+        I am an aspiring Software Development Engineer with a strong foundation in
+        programming, object-oriented concepts, and problem solving. I enjoy building
+        practical applications, learning new technologies, and writing clean,
+        maintainable code to solve real-world problems.
+    </p>
+</section>
+
+<section id="education">
+    <h2>Education</h2>
+
+    <div class="education-card">
+        <h3>Bachelor of Engineering – Information Science & Engineering</h3>
+        <p><strong>Institution:</strong> JSS Science and Technology University</p>
+        <p><strong>Year:</strong> 2021 – 2025</p>
+    </div>
+
+    <div class="education-card">
+        <h3>Diploma – Electronics & Communication Engineering</h3>
+        <p><strong>Institution:</strong> JSS Polytechnic</p>
+        <p><strong>Year:</strong> 2019 – 2021</p>
+    </div>
+
+</section>
+
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>Java</span>
+        <span>Python</span>
+        <span>SQL</span>
+        <span>OOPS</span>
+        <span>Data Structures</span>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="projects">
+
+        <div class="project-card">
+            <h3>❤️ Heart Rate & SpO₂ Monitoring System</h3>
+            <p>
+                Designed a real-time health monitoring system to measure heart rate
+                and blood oxygen (SpO₂) levels using sensors and a microcontroller.
+                The system processes live data and displays accurate readings for
+                continuous health monitoring.
+            </p>
+        </div>
+
+        <div class="project-card">
+            <h3>👨‍💼 Workplace Monitoring with Automated Alerts</h3>
+            <p>
+                Developed a Python-based monitoring system using OpenCV and YOLO to
+                detect employee presence and send automated email alerts when no
+                activity is detected for a defined duration.
+            </p>
+        </div>
+
+        
+
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Email: reethu@example.com</p>
+    <p>LinkedIn: linkedin.com/in/reethu</p>
+</section>
+
+<footer>
+    <p>© 2026 Reethu M | Portfolio</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="calculateDiscount('price',10)">Discount</button>
+    <script>
+
+    function calculateDiscount(price , discount){
+
+        try{
+
+            if(typeof price != "number" || typeof discount != "number")
+        {
+
+            throw new Error("Price and discount should be in nos ")
+
+        }
+            let finalprice = price -(price*discount /100);
+            console.log("final price is :" , finalprice);
+        }
+        catch(error)
+        {document.write("Calculation error :", error.message)}
+
+
+    }
+    </script>
+</body>
+</html>

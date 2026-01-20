@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Salary Calculation</title>
+</head>
+<body>
+
+<!-- a company wants to automate monthly salary calculation for employees based on their
+ working days, basic pay and bonus
+ . create a script file to 
+ a) calculate gross salary
+ b) apply tax deduction 
+ c) display employee net salary  -->
+
+<h2>Employee Salary Automation</h2>
+
+<label>Employee Name:</label><br>
+<input type="text" id="ename"><br><br>
+
+<label>Working Days:</label><br>
+<input type="number" id="days"><br><br>
+
+<label>Basic Pay (per day):</label><br>
+<input type="number" id="basic"><br><br>
+
+<label>Bonus:</label><br>
+<input type="number" id="bonus"><br><br>
+
+<button onclick="employee.calculateSalary()">Calculate Salary</button>
+
+<h3 id="result"></h3>
+
+<script src="salary.js"></script>
+
+</body>
+</html>

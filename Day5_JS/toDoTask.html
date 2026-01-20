@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Todo Task Directory</title>
+</head>
+<body>
+
+<h2>Todo Task Directory (First 5 Users)</h2>
+
+<table border="1" cellpadding="10">
+    <tr>
+        <th>User ID</th>
+        <th>Email</th>
+        <th>Completed</th>
+    </tr>
+    <tbody id="todoData"></tbody>
+</table>
+
+<p id="errorMsg"></p>
+
+<script>
+    // API call
+    const getTodos = new Promise((resolve, reject) => {
+        fetch("https://jsonplaceholder.typicode.com/todos")
+            .then(response => {
+                if (!response.ok) {
+                    reject("API Failure");
+                }
+                return response.json();
+            })
+            .then(data => resolve(data))
+            .catch(error => reject(error));
+    });
+
+    // Consume Promise
+    getTodos
+        .then(todos => {
+            const tableBody = document.getElementById("todoData");
+            const usersMap = {};
+            const firstFiveUsers = [];
+
+            // Collect first 5 UNIQUE users
+            for (let todo of todos) {
+                if (!usersMap[todo.userId]) {
+                    usersMap[todo.userId] = true;
+                    firstFiveUsers.push(todo);
+                }
+
+                if (firstFiveUsers.length === 5) {
+                    break;
+                }
+            }
+
+            // Display users
+            firstFiveUsers.forEach(user => {
+                const row = document.createElement("tr");
+
+                row.innerHTML = `
+                    <td>${user.userId}</td>
+                    <td>user${user.userId}@company.com</td>
+                    <td>${user.completed}</td>
+                `;
+
+                tableBody.appendChild(row);
+            });
+        })
+        .catch(error => {
+            document.getElementById("errorMsg").innerText =
+                "Failed to fetch todo data.";
+            console.log(error);
+        });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+table {
+  width: 70%;
+  border-collapse: collapse; /* Merges borders */
+  margin: 20px auto; /* Centers table */
+}
+th, td {
+  border: 3px solid #333;
+  padding: 10px;
+  text-align: center;
+}
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>City</th>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>25</td>
+    <td>New York</td>
+  </tr>
+  <tr>
+    <td>Emma</td>
+    <td>30</td>
+    <td>London</td>
+  </tr>
+  <tr>
+    <td>Niti</td>
+    <td>45</td>
+    <td>Delhi</td>
+  </tr>
+</table>
+
+
+<!-- Alternating Row Colors (Zebra Stripes)
+Helps improve readability in large tables.
+Example: -->
+
+<style>
+tr:nth-child(even) {
+  background-color :aqua;
+}
+</style>
+  <!-- Every even row gets a light background.
+Hover Effects
+Highlight rows when the user moves the mouse over them.
+Example: -->
+
+<style>
+tr:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+</style>
+<!-- Responsive Tables
+Tables don’t always fit on small screens. 
+You can make them scrollable:
+Example: -->
+
+<style>
+.table-container {
+  overflow-x: auto;
+}
+table {
+  width: 70%;
+  border-collapse: collapse;
+}
+</style>
+<div class="table-container">
+  <table>
+    <tr>
+      <th>Product</th>
+      <th>Price</th>
+      <th>Stock</th>
+      <th>Supplier</th>
+      <th>Location</th>
+    </tr>
+    <tr>
+      <td>Laptop</td>
+      <td>$800</td>
+      <td>10</td>
+      <td>ABC Corp</td>
+      <td>USA</td>
+    </tr>
+    <tr>
+      <td>Phone</td>
+      <td>$500</td>
+      <td>20</td>
+      <td>XYZ Ltd</td>
+      <td>UK</td>
+    </tr>
+  </table>
+</div>
+The table becomes scrollable horizontally on small screens. 
+
+<hr>
+
+<form action="submit.php" method="post">
+  <!-- Required field -->
+  Name: <input type="text" name="name" required><br><br>
+<!-- Email validation -->
+  Email: <input type="email" name="email" required><br><br>
+<!-- Password with length -->
+  Password: <input type="password" minlength="6" maxlength="12" required><br><br>
+<!-- Number with min, max, step -->
+  Age: <input type="number" min="18" max="60" step="1" required><br><br>
+<!-- Pattern -->
+  Zip Code: <input type="text" pattern="[0-9]{6}" placeholder="6-digit code" required><br><br>
+<input type="submit" value="Submit">
+</form>
+
+</body>
+</html>

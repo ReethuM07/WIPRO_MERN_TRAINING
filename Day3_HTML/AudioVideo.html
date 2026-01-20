@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Attributes of <audio>:
+	• controls → Displays play, pause, and volume controls.
+	• autoplay → Plays audio automatically when the page loads.
+	• loop → Repeats audio continuously.
+	• muted → Starts audio in muted mode.
+Video in HTML (<video>)
+The <video> tag is used to embed videos directly into a webpage. -->
+    <audio controls>
+  <source src="song.mp3" type="audio/mpeg">
+  <source src="song.ogg" type="audio/ogg">
+  Your browser does not support the audio element.
+</audio>
+<br>
+<video width="400" controls >
+  <source src="video.mp4" type="video/mp4">
+  <source src="video.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+
+<!-- Attributes of <video>:
+	• controls → Adds video controls (play, pause, volume).
+	• autoplay → Plays video automatically (use with muted for SEO).
+	• loop → Repeats the video continuously.
+	• poster → Adds a thumbnail image before video plays.
+	• muted → Starts video with no sound.
+Subtitles & Captions (<track>):
+Improves accessibility for hearing-impaired users. -->
+
+<video width="560" controls>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+  <track src="subtitles.vtt" kind="subtitles" srclang="en" label="English">
+  Your browser does not support the video tag.
+</video>
+
+
+Reduces page load time by loading media only when visible.
+
+<video src="video.mp4" controls loading="lazy" width="560"></video>
+
+</body>
+</html>
