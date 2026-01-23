@@ -1,0 +1,34 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Ladies Boots"
+    },
+    {
+      "id": 2,
+      "name": "Leather Jackets"
+    },
+    {
+      "id": 3,
+      "name": "Bags"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Jacket",
+      "price": 1999
+    },
+    {
+      "id": 2,
+      "name": "Belt",
+      "price": 799
+    },
+    {
+      "id": 3,
+      "name": "Shoes",
+      "price": 2499
+    }
+  ],
+  "cart": []
+}

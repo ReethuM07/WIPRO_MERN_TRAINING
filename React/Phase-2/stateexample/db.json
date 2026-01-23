@@ -1,0 +1,24 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "name": "React",
+      "duration": "30 days"
+    },
+    {
+      "id": 2,
+      "name": "Java",
+      "duration": "45 days"
+    },
+    {
+      "id": 3,
+      "name": "Python",
+      "duration": "20 days"
+    },
+    {
+      "id": 4,
+      "name": "AIML",
+      "duration": "35 days"
+    }
+  ]
+}
