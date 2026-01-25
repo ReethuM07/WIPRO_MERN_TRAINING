@@ -1,0 +1,17 @@
+.app {
+  height: 100vh;
+  padding: 40px;
+  transition: 0.3s;
+}
+
+/* Light Theme */
+.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Dark Theme */
+.dark {
+  background-color: #111827;
+  color: #ffffff;
+}
