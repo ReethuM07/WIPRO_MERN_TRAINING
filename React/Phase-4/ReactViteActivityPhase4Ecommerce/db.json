@@ -1,0 +1,35 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Jacket",
+      "price": 3999
+    },
+    {
+      "id": 2,
+      "name": "Belt",
+      "price": 1999
+    },
+    {
+      "id": 3,
+      "name": "Shoes",
+      "price": 9999
+    },
+    {
+      "id": 4,
+      "name": "Bag",
+      "price": 4599
+    },
+    {
+      "id": 5,
+      "name": "Boots",
+      "price": 7000
+    },
+    {
+      "name": "Bodycon",
+      "price": 3799,
+      "id": 6
+    }
+  ],
+  "cart": []
+}
