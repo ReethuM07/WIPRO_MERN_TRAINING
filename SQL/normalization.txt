@@ -1,0 +1,151 @@
+Normalization ; when we have a large dataset in a single table which is not feasible to read the proper data
+Because multiple columns may or may not belong to each other so Normalization is core database design
+
+It is  a process of decomposing large tables into small tables and columns are also related to each other.
+
+
+If data is not normalized :
+	1- Data redundancy
+	2- Update anomalies
+	3- Insert anomalies
+	4- Delete anomalies 
+	So normalization is to organize data to reduce duplication and maintain integrity 
+	
+	
+	A  company stores customer orders details in One table
+	
+	Orderdata
+	
+	Orderid 	Customer_name	Customer_phone	Product_names 	Product_prices 	Order_date  
+						
+	
+	
+	Problems are :
+	Multiple values in one column
+	Hard to query individual products
+	Data consistency risk
+	
+	That's why Normalized data can be done by following the rules of 1NF , 2NF ,3 NF …..
+	
+	1NF say's
+	
+	Each column has single value ( atomic values)
+	No repeating group
+	Each row uniquely identifiable
+	
+	Below is not in 1NF
+	
+	Orderid 	Customer_name	Customer_phone	Product_names 	Product_prices 	Order_date  
+	101	Amit	945453443	Laptop, mouse	70000,500	2026-01-29
+						
+	102	Rahul	887798798	Keyboard	1200	2026-01-12
+	
+	After 1NF
+	
+	Orderid 	Customer_name	Customer_phone	Product_name	Product_prices 	Order_date  
+	101	Amit	945453443	Laptop	70000	2026-01-15
+	101	Amit	945453443	mouse	500	2026-01-15
+	102	Rahul	887798798	Keyboard	1200	2026-01-12
+	
+	2NF says
+	
+	It should be in 1 NF first
+	No partial dependency 
+	(Composite key ) combination of two keys to make a primary key  (name+phone)
+	
+	Composite key let say  is (order_id , product_name)
+	Customer_name depends only on order_id
+	Customer_phone depends only on order_id
+	Product_price depends only on product_name
+	Order_date depends only on order_id
+	
+	Violation of 2 NF
+	
+	Orders
+	
+	Order_id	Customer_name	Customer_phone no 	Order_date
+	101	Amit	687987987	2026-01-15
+	102	Rahul	343434534	2026-01-12
+	
+	
+	Order_items
+	
+	Order_id	Product_name	Product_price
+	101	Laptop	70000
+	101	Mouse	500
+	102	Keyboard	1200
+	
+	3NF says
+	
+	It should be in 2nf
+	No transitive dependency
+	 
+	• Definition: If 
+	𝐴→𝐵,𝐵→𝐶
+, then 𝐴→𝐶
+ which is a transitive dependency. This usually happens in tables with three or more attributes.
+	• Example:
+In a Studenttable, Student_ID(Key) →Batch_ID→Batch_Name. The Batch_Namedepends on Batch_ID
+, which depends on Student_ID
+
+	• Normalization: To achieve Third Normal Form (3NF), transitive dependencies must be removed to eliminate insertion, update, and deletion anomalies.
+
+To remove transitive dependency
+
+	Customer table
+	
+	Customer_id	Customer_name	Customer_phone no 
+	C1	Amit	687987987
+	C2	Rahul	343434534
+
+	
+	Orders
+	
+	Order_id	Customer_id	Order_date
+	101	C1	2026-01-15
+	102	C2	2026-01-12
+	
+	Product table
+	
+	product_id	Product_name	Product_price
+	P1	Laptop	70000
+	P2	Mouse	500
+	P3	Keyboard	1200
+	
+	
+	
+	Order_items
+	
+	Order_id	Product_id
+	101	P1
+	101	P2
+	102	P3
+
+
+ BCNF -- Sometimee 3NF is also not enough then we have to go for BCNF also 
+
+A table is in BCNF if 
+ 
+Every functional dependency  A->B
+Where A must be the super key and generally BCNF eliminates functional dependency anomalies
+
+In a college data
+
+Student_id 	Course	Trainer
+S1	Java	Niti
+S2 	Java 	Niti
+S3	React	Jiya
+S4 	Reat	Jiya
+
+
+Student_id , course is taught by trainer
+Course -> trainer
+
+Course	Trainer
+Java	Niti
+React	Jiya
+Student_id 	Course
+S1	Java
+S2 	Java 
+S3	React
+S4 	Reat
