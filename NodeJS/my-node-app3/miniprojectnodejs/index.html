@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Backend UI</title>
+</head>
+<body>
+    <h2>Backend Demo</h2>
+
+    <button onclick="callApi('/health')">Health Check</button>
+    <button onclick="callApi('/login')">Login User</button>
+    <button onclick="callApi('/users')">View Users</button>
+
+    <pre id="output"></pre>
+
+    <script>
+        async function callApi(endpoint) {
+            const res = await fetch(endpoint);
+            const data = await res.text();
+            document.getElementById("output").innerText = data;
+        }
+    </script>
+</body>
+</html>

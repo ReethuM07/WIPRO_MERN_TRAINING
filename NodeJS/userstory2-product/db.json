@@ -1,0 +1,7 @@
+{
+  "products": [
+    { "id": 1, "name": "Computer", "price": 99000, "category": "Electronics" },
+    { "id": 2, "name": "Sofa", "price": 25000, "category": "Furniture" },
+    { "id": 3, "name": "Pen", "price": 120, "category": "Stationery" }
+  ]
+}
