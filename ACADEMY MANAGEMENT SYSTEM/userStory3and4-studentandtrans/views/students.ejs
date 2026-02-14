@@ -1,0 +1,32 @@
+<h2>Students List</h2>
+
+<a href="/students/create">Create Student</a>
+|
+<a href="/students/enroll">Enroll Student</a>
+
+<br><br>
+
+<table border="1" cellpadding="10">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Email</th>
+  </tr>
+
+  <% students.forEach(student => { %>
+    <tr>
+      <td><%= student.id %></td>
+      <td><%= student.name %></td>
+      <td><%= student.email %></td>
+    </tr>
+  <% }) %>
+</table>
+
+<br>
+
+<a href="/students?page=<%= page - 1 %>">Previous</a>
+|
+<a href="/students?page=<%= page + 1 %>">Next</a>
+
+<br><br>
+<a href="/admin/dashboard">Back to Dashboard</a>

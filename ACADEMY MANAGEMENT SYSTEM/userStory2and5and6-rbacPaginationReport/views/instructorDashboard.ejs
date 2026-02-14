@@ -1,0 +1,14 @@
+<h2>Instructor Dashboard</h2>
+
+<h3>My Courses</h3>
+
+<ul>
+  <% courses.forEach(course => { %>
+    <li>
+      <%= course.title %> - ₹<%= course.fee %>
+    </li>
+  <% }) %>
+</ul>
+
+<br>
+<a href="/logout">Logout</a>

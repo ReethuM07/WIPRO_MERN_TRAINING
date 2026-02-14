@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Messages</title>
+</head>
+<body>
+  <h2>Company Announcements</h2>
+  <div id="messages"></div>
+
+  <script>
+    async function loadMessages() {
+      const res = await fetch("/user/messages");
+      const data = await res.json();
+
+      document.getElementById("messages").innerHTML = data.map(m =>
+        `<p>
+          ${m.text || ""}
+          ${m.file ? `<br><a href="/uploads/${m.file}" target="_blank">View File</a>` : ""}
+        </p>`
+      ).join("");
+    }
+
+    loadMessages();
+  </script>
+</body>
+</html>

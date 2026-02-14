@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Panel</title>
+</head>
+<body>
+  <h2>Admin Announcement Panel</h2>
+
+  <form id="form">
+    <textarea name="text" placeholder="Enter announcement"></textarea><br><br>
+    <input type="file" name="file"><br><br>
+    <button type="submit">Send</button>
+  </form>
+
+  <script>
+    document.getElementById("form").onsubmit = async (e) => {
+      e.preventDefault();
+      const formData = new FormData(e.target);
+
+      const res = await fetch("/admin/send", {
+        method: "POST",
+        headers: {
+          "x-admin-token": "admin123"
+        },
+        body: formData
+      });
+
+      const data = await res.json();
+      alert(data.message || data.error);
+    };
+  </script>
+</body>
+</html>

@@ -1,8 +1,11 @@
 {
-  "name": "userstory4-admin-dashboard",
+  "name": "testingexample",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,11 +14,10 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "bcryptjs": "^3.0.3",
-    "ejs": "^4.0.1",
+    "chai": "^6.2.2",
+    "dotenv": "^17.2.4",
     "express": "^5.2.1",
-    "express-session": "^1.19.0",
-    "jsonwebtoken": "^9.0.3",
-    "mongoose": "^9.1.6"
+    "mocha": "^11.7.5",
+    "supertest": "^7.2.2"
   }
 }

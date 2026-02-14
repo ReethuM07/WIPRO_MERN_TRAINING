@@ -1,0 +1,34 @@
+<h2>Enroll Student</h2>
+
+<form action="/students/enroll" method="POST">
+
+  <label>Select Student:</label>
+  <br>
+  <select name="studentId" required>
+    <% students.forEach(student => { %>
+      <option value="<%= student.id %>">
+        <%= student.name %>
+      </option>
+    <% }) %>
+  </select>
+  <br><br>
+
+  <label>Select Course:</label>
+  <br>
+  <select name="courseId" required>
+    <% courses.forEach(course => { %>
+      <option value="<%= course.id %>">
+        <%= course.title %>
+      </option>
+    <% }) %>
+  </select>
+  <br><br>
+
+  <input type="number" name="paymentAmount" placeholder="Payment Amount" required>
+  <br><br>
+
+  <button type="submit">Enroll</button>
+</form>
+
+<br>
+<a href="/students">Back to Students</a>

@@ -1,0 +1,24 @@
+<h2>Reports</h2>
+
+<h3>Total Students Per Course</h3>
+<ul>
+  <% studentsPerCourse.forEach(course => { %>
+    <li>
+      <%= course.title %> - <%= course.dataValues.totalStudents %> students
+    </li>
+  <% }) %>
+</ul>
+
+<hr>
+
+<h3>Total Revenue Per Instructor</h3>
+<ul>
+  <% revenuePerInstructor.forEach(inst => { %>
+    <li>
+      <%= inst.username %> - ₹<%= inst.dataValues.totalRevenue || 0 %>
+    </li>
+  <% }) %>
+</ul>
+
+<br>
+<a href="/admin/dashboard">Back to Dashboard</a>
