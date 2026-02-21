@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Laptop Backpack",
+    "category": "accessories",
+    "price": 1499,
+    "image": "https://picsum.photos/seed/laptopbag/600/400"
+  },
+  {
+    "id": 2,
+    "name": "Scientific Calculator",
+    "category": "electronics",
+    "price": 999,
+    "image": "https://picsum.photos/seed/calculator/600/400"
+  },
+  {
+    "id": 3,
+    "name": "Desk Organizer",
+    "category": "stationery",
+    "price": 499,
+    "image": "https://picsum.photos/seed/desk/600/400"
+  },
+  {
+    "id": 4,
+    "name": "Reusable Water Bottle",
+    "category": "lifestyle",
+    "price": 399,
+    "image": "https://picsum.photos/seed/bottle/600/400"
+  }
+]
