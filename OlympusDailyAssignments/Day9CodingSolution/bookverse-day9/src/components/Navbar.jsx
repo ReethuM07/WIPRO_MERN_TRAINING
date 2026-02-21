@@ -1,0 +1,13 @@
+import { Link } from "react-router-dom";
+
+function Navbar() {
+  return (
+    <nav className="navbar navbar-dark bg-dark px-3">
+      <Link to="/home" className="navbar-brand">
+        📚 BookVerse
+      </Link>
+    </nav>
+  );
+}
+
+export default Navbar;

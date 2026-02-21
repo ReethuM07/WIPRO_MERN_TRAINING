@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog & Todo Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { color: #2c3e50; }
+        .container { display: flex; gap: 50px; }
+        .section { width: 50%; }
+        .card { background: #ecf0f1; padding: 10px; margin-bottom: 10px; border-radius: 5px; }
+        .error { color: red; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Blog Posts & Todo List</h1>
+    <div class="container">
+        <div class="section" id="posts-section">
+            <h2>Posts</h2>
+            <div id="posts-container"></div>
+            <div id="posts-error" class="error"></div>
+        </div>
+        <div class="section" id="todos-section">
+            <h2>Todos</h2>
+            <div id="todos-container"></div>
+            <div id="todos-error" class="error"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

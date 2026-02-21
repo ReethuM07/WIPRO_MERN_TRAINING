@@ -1,0 +1,22 @@
+{
+  "name": "day17codingsolutionnodejsbasics",
+  "version": "1.0.0",
+  "description": "",
+  "main": "hello-node.js",
+  "scripts": {
+  "hello": "node hello-node.js",
+  "index": "node index.js",
+  "greet": "node greet.js",
+  "test": "echo \"Error: no test specified\" && exit 1"
+}
+,
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "figlet": "^1.10.0"
+  },
+  "devDependencies": {}
+}

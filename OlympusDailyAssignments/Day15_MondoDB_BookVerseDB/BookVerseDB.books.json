@@ -1,0 +1,84 @@
+[{
+  "_id": {
+    "$oid": "6984a0f58f12a68daec2929b"
+  },
+  "title": "Foundation",
+  "genre": "Science Fiction",
+  "publicationYear": 1952,
+  "authorId": {
+    "$oid": "65a001111111111111111111"
+  },
+  "ratings": [
+    {
+      "user": "Reethu",
+      "score": 5,
+      "comment": "Classic sci-fi!"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6984a0f58f12a68daec2929c"
+  },
+  "title": "I, Robot",
+  "genre": "Science Fiction",
+  "publicationYear": 1950,
+  "authorId": {
+    "$oid": "65a001111111111111111111"
+  },
+  "ratings": [
+    {
+      "user": "Neethu",
+      "score": 4,
+      "comment": "Thought-provoking"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6984a0f58f12a68daec2929d"
+  },
+  "title": "Harry Potter and the Sorcerer's Stone",
+  "genre": "Fantasy",
+  "publicationYear": 1997,
+  "authorId": {
+    "$oid": "65a002222222222222222222"
+  },
+  "ratings": [
+    {
+      "user": "Preethu",
+      "score": 5,
+      "comment": "Magical!"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6984a0f58f12a68daec2929e"
+  },
+  "title": "A Game of Thrones",
+  "genre": "Fantasy",
+  "publicationYear": 1996,
+  "authorId": {
+    "$oid": "65a003333333333333333333"
+  },
+  "ratings": [
+    {
+      "user": "Reethu",
+      "score": 5,
+      "comment": "Epic fantasy"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6984a0f58f12a68daec2929f"
+  },
+  "title": "The Winds of Winter",
+  "genre": "Fantasy",
+  "publicationYear": 2025,
+  "authorId": {
+    "$oid": "65a003333333333333333333"
+  },
+  "ratings": []
+}]

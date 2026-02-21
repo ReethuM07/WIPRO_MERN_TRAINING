@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Day 24 - Upload + Chat</title>
+</head>
+<body>
+
+  <h2>📤 File Upload</h2>
+
+  <form id="uploadForm">
+    <input type="file" id="fileInput" />
+    <button type="submit">Upload PDF</button>
+  </form>
+
+  <p id="uploadStatus"></p>
+
+  <hr />
+
+  <h2>💬 Real-Time Chat</h2>
+
+  <input id="message" autocomplete="off" />
+  <button onclick="sendMessage()">Send</button>
+
+  <ul id="messages"></ul>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    const socket = io();
+
+    // ================= FILE UPLOAD =================
+    const form = document.getElementById("uploadForm");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const fileInput = document.getElementById("fileInput");
+      const formData = new FormData();
+      formData.append("file", fileInput.files[0]);
+
+      try {
+        const response = await fetch("/upload", {
+          method: "POST",
+          body: formData
+        });
+
+        const text = await response.text();
+        document.getElementById("uploadStatus").innerText = text;
+      } catch (error) {
+        document.getElementById("uploadStatus").innerText = "Upload failed";
+      }
+    });
+
+    // ================= CHAT =================
+    function sendMessage() {
+      const msg = document.getElementById("message").value;
+      socket.emit("chat message", msg);
+      document.getElementById("message").value = "";
+    }
+
+    socket.on("chat message", function (msg) {
+      const li = document.createElement("li");
+      li.textContent = msg;
+      document.getElementById("messages").appendChild(li);
+    });
+  </script>
+
+</body>
+</html>
