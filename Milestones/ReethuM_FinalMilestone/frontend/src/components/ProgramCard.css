@@ -1,0 +1,81 @@
+.program-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.program-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.program-card h3 {
+    color: #1f4037;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #1f4037;
+    padding-bottom: 8px;
+}
+
+.program-details p {
+    margin: 8px 0;
+    color: #555;
+    font-size: 14px;
+}
+
+.level-badge {
+    display: inline-block;
+    margin-left: 8px;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+}
+
+.level-beginner {
+    background: #2ecc71;
+}
+
+.level-intermediate {
+    background: #f39c12;
+}
+
+.level-advanced {
+    background: #e74c3c;
+}
+
+.enroll-btn {
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background: #1f4037;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.enroll-btn:hover:not(:disabled) {
+    background: #16352f;
+}
+
+.enroll-btn:disabled {
+    background: #95a5a6;
+    cursor: not-allowed;
+}
+
+.enroll-btn.enrolled {
+    background: #2ecc71;
+}
+
+
+
+
